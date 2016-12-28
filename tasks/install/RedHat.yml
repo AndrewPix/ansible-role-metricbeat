@@ -1,12 +1,7 @@
 ---
 
 - name: MetricBeat Yum Repository
-  copy:
-    dest="/etc/yum.repos.d/metricbeat-{{metricbeat_version}}.repo"
-    content="{{metricbeat_repository}}"
-    owner="root"
-    group="root"
-    mode="0644"
+  template: src=metricbeat.repo.js dest=/etc/yum.repos.d/metricbeat-{{ metricbeat_version }}.repo
   when: metricbeat_use_repo
 
 - name: Install MetricBeat (RedHat)

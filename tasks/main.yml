@@ -1,9 +1,5 @@
 ---
 
-- name: Include OS Family vars
-  include_vars: "{{ansible_os_family}}.yml"
-  tags: [ 'metricbeat' ] 
-
 - include: install.yml
   become: true
   tags: [ 'metricbeat', 'metricbeat.install' ]

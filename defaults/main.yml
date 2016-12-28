@@ -14,10 +14,17 @@ metricbeat_create_user: true
 # 
 metricbeat_version: 5.0.0-alpha4
 
+
+metricbeat_apt_key: https://packages.elastic.co/GPG-KEY-elasticsearch
+metricbeat_apt_repository: "https://packages.elastic.co/beats/apt"
+metricbeat_baseurl: "https://download.elastic.co/beats/metricbeat"
+
 # Metricbeat Solaris url
 #
 # metricbeat_solaris_url: {{http://<url_to_your_pkg>/metricbeat-{{ metricbeat_version }}-solaris-amd64.pkg
 
+metricbeat_packages:
+  - "metricbeat"
 
 # Start metricbeat at boot time
 #
